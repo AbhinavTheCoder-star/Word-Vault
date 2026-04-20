@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+</head>
+
+<body>
+    <div class="container">
+
+        <a href="/" class="back-btn">← Back</a>
+
+        <h1>Search Result</h1>
+
+        {% if word %}
+            <div class="result-card">
+                <h2>{{ word.word }}</h2>
+
+                <p class="label">Meaning</p>
+                <p>{{ word.meaning }}</p>
+
+                <p class="label">Example</p>
+                <p class="example">"{{ word.example }}"</p>
+            </div>
+        {% else %}
+            <div class="error-box">
+                Word not found 😢
+            </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>

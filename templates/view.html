@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>View Words</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    </head>
+    <body>
+        <div class="container">
+
+            <a href="/" class="back-link">← Back to Home</a>
+            <h1>List of words in your vault</h1>
+
+            {% for word in words %}
+                <div class="word-card">
+                    <h3>{{ word.word }}</h3>
+                    <p><b>Meaning:</b> {{ word.meaning }}</p>
+                    <p><b>Example:</b> {{ word.example }}</p>
+                 </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
