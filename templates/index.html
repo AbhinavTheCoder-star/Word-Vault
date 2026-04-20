@@ -1,0 +1,57 @@
+<!DocType html>
+
+<html>
+    
+    <head>
+        <title>Word Vault</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="navbar">
+                <div class="nav-title">Word Vault</div>
+
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/view">View</a>
+            </div>
+        </div>
+
+            {% if message %}
+                <div class="toast success">
+                    {{ message }}
+                </div>
+            {% endif %}
+        
+            <form action="/add" method="post">
+                <input name="word" placeholder="Word">
+                <input name="meaning" placeholder="Meaning">
+                <input name="example" placeholder="Example">
+                <button type="submit">Add</button>
+                </form>
+
+            <form action="/search" method="post">
+                <input name="word" placeholder="Search word">
+                <button type="submit">Search</button>
+            </form>
+
+            <a href="/view" class="link-button">View Words</a>
+
+            <form action="/update" method="post">
+                <input name="word" placeholder="Word to update">
+                <input name="meaning" placeholder="New meaning">
+                <input name="example" placeholder="New example">
+                <button type="submit">Update</button>
+            </form>
+
+            <form action="/delete" method="post">
+                <input name="word" placeholder="Word to delete">
+                <button type="submit">Delete</button>
+            </form>
+
+        </div>
+    </body>
+
+</html>
