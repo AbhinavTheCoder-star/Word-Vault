@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+.container {
+    width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.word-card {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+}
+
+.word-card h3 {
+    margin: 0;
+    color: #007bff;
+}
+
+.word-card p {
+    margin: 4px 0;
+}
+
+.word-card:hover {
+    background: #f9fbff;
+    padding-left: 5px;
+    transition: 0.2s;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
